@@ -1,0 +1,54 @@
+---
+const { product } = Astro.props;
+---
+
+<article class="card">
+  <a href={`/product/${product.id}/`}> <img src={product.image} alt="billede af tøj " /></a>
+  <p class="name">{product.name}</p>
+  <p><strong>{product.size}</strong> {product.brand}</p>
+  <p>{product.closet}</p>
+</article>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .name {
+    text-align: center;
+    text-transform: uppercase;
+    color: #393903;
+    font-family: "Crimson Pro";
+    margin: 0;
+    font-weight: 500;
+  }
+
+  p {
+    text-align: center;
+    color: #393903;
+    font-family: "Crimson Pro";
+    margin-top: 0;
+    font-weight: 300;
+  }
+
+  @media (min-width: 640px) and (max-width: 1024px) {
+    p {
+      font-size: 20px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .name {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 24px;
+    }
+
+    .card img {
+      border-radius: 20px;
+    }
+  }
+</style>

@@ -1,22 +1,59 @@
+---
+import "../css/style.css";
+import facebook from "../assets/img/logo-facebook.png";
+import instagram from "../assets/img/logo-instagram.png";
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Basics</title>
+  </head>
+  <body>
+    <slot />
+    <footer>
+      <div class="footer">
+        <div>
+          <h3>Another Closet</h3>
+          <p>hej@anothercloset.dk</p>
+          <p>Tønsbergvej 104-4000 Roskilde</p>
+          <p>CVR nr.: 44995875</p>
+          <p>Copyright 2023, Another Closet</p>
+          <a href="https://www.facebook.com/anotherclosetdanmark"><img src={facebook.src} alt="Facebook logo" /></a>
+          <a href="https://www.instagram.com/anothercloset.dk/"><img src={instagram.src} alt="Instagram logo" /></a>
+        </div>
+        <div>
+          <h3>Mere info</h3>
+          <p>Sådan fungerer det</p>
+          <p>Vores mission</p>
+          <p>Handelsbetingelser</p>
+          <p>Cookies- og privatlivspolitik</p>
+          <p>FAQ</p>
+        </div>
+        <div>
+          <h3>Nyhedsbrev</h3>
+          <form>
+            <div class="input-row">
+              <label for="email">Email</label>
+              <button type="submit">Tilmeld</button>
+            </div>
+            <input type="email" id="email" name="email" />
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>

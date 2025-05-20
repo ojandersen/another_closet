@@ -1,0 +1,143 @@
+---
+const {} = Astro.props;
+import Button_forside from "../components/button_forside.astro";
+---
+
+<section class="afsnit2">
+  <h2>SÅDAN FUNGERER DET</h2>
+
+  <p class="del1">Dele-tøj på abonnement! <br /> Lån 3 unikke stykker tøj hver måned for kun 149 kr.</p>
+  <p class="del2"></p>
+  Find dit tøjfællesskab. <br />
+  Tilmeld dig en tøjsalon. <br />
+  Mød op. Lån 3 stykker tøj. <br />
+  En måned senere: returner & lån nyt.
+</section>
+
+<section class="afsnit3">
+  <h2>FIND DIT TØJFÆLLESSKAB TÆT PÅ DIG</h2>
+  <div class="button_afsnit">
+    <button>
+      <a href="/oeve">FREDERICIA</a>
+    </button>
+    <button>
+      <a href="/oeve">LYNGBY</a>
+    </button>
+    <button>
+      <a href="/oeve">RIBE</a>
+    </button>
+    <button>
+      <a href="/oeve">ROSKILDE</a>
+    </button>
+  </div>
+  <div class="button_afsnit2">
+    <button>
+      <a href="/oeve">KEA</a>
+    </button>
+    <button>
+      <a href="/oeve">NØRREBRO</a>
+      <button>
+        <a href="/oeve">RINGKØBING</a>
+      </button>
+      <button>
+        <a href="/oeve">AAU KØBENHAVN</a>
+      </button>
+    </button>
+  </div>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+    .afsnit2 {
+      background-color: #f2dfd5;
+      color: #393903;
+      text-align: center;
+      font-size: clamp(1rem, 2.5vw, 2rem);
+      font-family: "Spectral", serif;
+      line-height: 1.2;
+      padding: 0.5rem;
+      padding-bottom: 2rem;
+    }
+
+    .afsnit2 h2 {
+      font-size: clamp(2rem, 7vw, 8rem);
+      font-family: "Spectral", serif;
+      font-weight: 350;
+      font-style: normal;
+      margin-bottom: -10px;
+    }
+
+    .afsnit3 {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.7rem;
+      padding-bottom: 4rem;
+      background-color: #f4f1e8;
+    }
+    .afsnit3 h2 {
+      font-size: clamp(1rem, 7vw, 6rem);
+      font-family: "Spectral", serif;
+      font-weight: 350;
+      font-style: normal;
+      text-align: center;
+    }
+    .button_afsnit {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+    .button_afsnit2 {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      background-color: #d7d8c9;
+      text-decoration: none;
+      color: #393903;
+      font-size: clamp(1rem, 2.5vw, 2rem);
+      cursor: pointer;
+      font-family: "Spectral", serif;
+      width: 90vw;
+      padding: 1rem;
+      margin: 0 auto;
+      border-radius: 1rem;
+      border: none;
+    }
+
+    button a {
+      text-decoration: none;
+      color: inherit;
+      /* width: 100%; */
+      text-align: center;
+    }
+
+    @media (min-width: 800px) {
+      .button_afsnit,
+      .button_afsnit2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      button {
+        width: 90%;
+        margin: 0 auto;
+      }
+      button:hover {
+        background-color: #393903;
+        color: #d7d8c9;
+        transition: 0.3s ease;
+      }
+    }
+  </style>
+</section>

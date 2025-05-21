@@ -1,1 +1,52 @@
-<section>hejhejhejhej</section>
+---
+
+---
+
+<div class="banner">
+  <div class="scrolling-text">
+    <span class="word-group">ANOTHER DRESS</span>
+    <span class="word-group">ANOTHER SHIRT</span>
+    <span class="word-group">ANOTHER SKIRT</span>
+    <span class="word-group">ANOTHER LIFE</span>
+
+    <span class="word-group">ANOTHER DRESS</span>
+    <span class="word-group">ANOTHER SHIRT</span>
+    <span class="word-group">ANOTHER SKIRT</span>
+    <span class="word-group">ANOTHER LIFE</span>
+  </div>
+</div>
+<style>
+  .banner {
+    width: 100%;
+    background: #393903;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+  }
+
+  .scrolling-text {
+    display: inline-block;
+    white-space: nowrap;
+    will-change: transform;
+    animation: scroll 20s linear infinite;
+  }
+
+  .word-group {
+    margin-right: 90px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+</style>

@@ -2,6 +2,7 @@
 //@ts-nocheck
 
 import Layout from "../../layouts/Layout.astro";
+import Banner from "../../components/Banner.astro";
 
 export async function getStaticPaths() {
   const curl = "  https://weydcspvvunwbeoolpli.supabase.co/rest/v1/AnotherCloset?select=*";
@@ -44,6 +45,7 @@ const { post } = Astro.props;
       <p>Dette stykke tøj tilhører klædeskabet <br /> <strong>{post.closet}</strong></p>
     </div>
   </section>
+  <Banner />
 </Layout>
 
 <style>

@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import Banner from "../components/Banner.astro";
 import Hero from "../components/Hero.astro";
 import Medlem from "../components/medlem.astro";
-
+import Afsnit from "../components/afsnit.astro";
 import Listeview from "../components/Listeview.astro";
 
 const curl = "https://weydcspvvunwbeoolpli.supabase.co/rest/v1/AnotherCloset?category=eq.cloths";
@@ -24,6 +24,7 @@ console.log(data);
 <Layout>
   <Hero />
   <Banner />
+  <Afsnit />
   <h1>Medlemmernes <br />favoritter</h1>
   <section class="card_grid">
     {data.map((product) => <Listeview {product} />)}

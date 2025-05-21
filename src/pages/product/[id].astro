@@ -4,10 +4,13 @@
 import Layout from "../../layouts/Layout.astro";
 import Banner from "../../components/Banner.astro";
 import Listeview from "../../components/Listeview.astro";
+import Header from "../../components/Header.astro";
 
-const curl = "https://weydcspvvunwbeoolpli.supabase.co/rest/v1/AnotherCloset?category=eq.cloths";
+const curl =
+  "https://weydcspvvunwbeoolpli.supabase.co/rest/v1/AnotherCloset?category=eq.cloths";
 
-const apikey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndleWRjc3B2dnVud2Jlb29scGxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2NDY5MDMsImV4cCI6MjA2MzIyMjkwM30.n23gpeZ4XikBpL5r_vuSYntCRJLQ7lqiLq92_HovPJo";
+const apikey =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndleWRjc3B2dnVud2Jlb29scGxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2NDY5MDMsImV4cCI6MjA2MzIyMjkwM30.n23gpeZ4XikBpL5r_vuSYntCRJLQ7lqiLq92_HovPJo";
 
 const options = {
   headers: {
@@ -19,9 +22,11 @@ const data = await fetch(curl, options).then((response) => response.json());
 console.log(data);
 
 export async function getStaticPaths() {
-  const curl = "  https://weydcspvvunwbeoolpli.supabase.co/rest/v1/AnotherCloset?select=*";
+  const curl =
+    "  https://weydcspvvunwbeoolpli.supabase.co/rest/v1/AnotherCloset?select=*";
 
-  const apikey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndleWRjc3B2dnVud2Jlb29scGxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2NDY5MDMsImV4cCI6MjA2MzIyMjkwM30.n23gpeZ4XikBpL5r_vuSYntCRJLQ7lqiLq92_HovPJo";
+  const apikey =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndleWRjc3B2dnVud2Jlb29scGxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2NDY5MDMsImV4cCI6MjA2MzIyMjkwM30.n23gpeZ4XikBpL5r_vuSYntCRJLQ7lqiLq92_HovPJo";
 
   const options = {
     headers: {
@@ -44,6 +49,7 @@ const { post } = Astro.props;
 ---
 
 <Layout>
+  <Header />
   <section class="single_view">
     <div class="billede">
       <img src={post.image} alt="billede af tøj" />
@@ -56,7 +62,10 @@ const { post } = Astro.props;
       <p><strong>Stand:</strong> {post.condition}</p>
       <p><strong>Vask:</strong> {post.wash}</p>
       <p><strong>Ejer:</strong> {post.owner}</p>
-      <p>Dette stykke tøj tilhører klædeskabet <br /> <strong>{post.closet}</strong></p>
+      <p>
+        Dette stykke tøj tilhører klædeskabet <br />
+        <strong>{post.closet}</strong>
+      </p>
     </div>
   </section>
   <Banner />

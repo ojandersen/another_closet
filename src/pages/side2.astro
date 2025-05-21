@@ -4,7 +4,8 @@ import Layout from "../layouts/Layout.astro";
 import Banner from "../components/Banner.astro";
 import Hero2 from "../components/Hero2.astro";
 import Medlem from "../components/medlem.astro";
-
+import Tekststykke_1 from "../components/Tekststykke_1.astro";
+import Tekststykke_2 from "../components/Tekststykke_2.astro";
 import Listeview from "../components/Listeview.astro";
 import Hero2 from "../components/Hero2.astro";
 
@@ -25,6 +26,8 @@ console.log(data);
 <Layout>
   <Hero2 />
   <Banner />
+  <Tekststykke_1 />
+  <Tekststykke_2 />
   <h1>Medlemmernes <br />favoritter</h1>
   <section class="card_grid">
     {data.map((product) => <Listeview {product} />)}

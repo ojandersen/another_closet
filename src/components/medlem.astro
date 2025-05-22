@@ -17,12 +17,15 @@ import Layout from "../layouts/Layout.astro";
 </section>
 
 <style>
- *{box-sizing: border-box;}
+  * {
+    box-sizing: border-box;
+  }
   .medlem {
     display: grid;
     background-color: #f2dfd5;
     color: #393903;
-    padding-top: 2rem;
+    padding-top: 0%;
+    padding-bottom: 8%;
   }
   .medlemmer_tekst h2 {
     font-size: clamp(3rem, 4vw, 5.5rem);
@@ -40,14 +43,14 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .p_medlem {
-    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    font-size: 16px;
     color: #393903;
     text-align: center;
     font-family: "Crimson Pro", serif;
     margin: 0 auto;
     padding: 2rem;
     font-weight: 200;
-    line-height: 1.5;
+    line-height: 1.4;
   }
   .medlemmer_billed {
     display: flex;
@@ -61,7 +64,7 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .medlemmer_billed img {
-    width: 100%;
+    width: 80%;
     height: auto;
     max-width: 100vw;
     object-fit: cover;
@@ -69,8 +72,7 @@ import Layout from "../layouts/Layout.astro";
   @media (min-width: 800px) {
     .medlem {
       grid-template-columns: 1fr 1fr;
-      padding-bottom: 2rem;
-      padding-top: 2rem;
+      padding-bottom: 0%;
     }
     .medlemmer_tekst {
       grid-column: 2 / 3;
@@ -83,9 +85,10 @@ import Layout from "../layouts/Layout.astro";
       width: 50vw;
     }
     .medlemmer_billed img {
-      width: 45vw;
+      width: 80%;
       height: auto;
-
+      padding-top: 8%;
+      padding-bottom: 8%;
       object-fit: cover;
     }
     .medlemmer_tekst h2 {
@@ -97,33 +100,4 @@ import Layout from "../layouts/Layout.astro";
       margin-top: 30px;
     }
   }
-
-  /* @media (min-width: 600px) {
-    .medlem {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      margin: 0 auto;
-      max-width: 100%;
-    }
-    .medlemmer_tekst {
-      grid-column: 2 / 3;
-      grid-row: 1;
-      line-height: 1.2;
-      width: 90%;
-      margin: 0 auto;
-    }
-    .medlemmer_tekst h2 {
-      margin: 0 auto;
-      text-align: center;
-      word-wrap: break-word;
-    }
-    .medlemmer_billed {
-      grid-column: 1 / 2;
-      grid-row: 1;
-      width: 45vw;
-      height: auto;
-      padding: 2rem;
-      object-fit: cover;
-    }
-  } */
 </style>

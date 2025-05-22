@@ -1,0 +1,181 @@
+<section>
+  <div class="invite_paragraph">
+    <h2>KLÆDESKABET PÅ <br /> ROSKILDE</h2>
+    <p class="paragraph_2">Tag en ven under armen, og kom og hør mere til vores <br /> tøjbyttesalon. Oplev glæden ved at dele frem for at købe!</p>
+    <div class="invite_button">
+      <p>
+        MODTAG INFORMATION <br />
+        GRATIS OG UFORPLIGTENDE
+      </p>
+    </div>
+  </div>
+</section>
+<style>
+  section {
+    text-align: center;
+  }
+  .invite_paragraph {
+    width: 100%;
+    background-color: #f2dfd5;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+  h2 {
+    color: #393903;
+    font-size: 20px;
+    font-size: clamp(2rem, 7vw, 8rem);
+    font-family: "Crimson Pro";
+    font-weight: 300;
+    line-height: 0.9;
+    padding-top: 2rem;
+  }
+  p {
+    color: #393903;
+    font-size: 10px;
+    padding-top: 3px;
+    font-family: "Crimson Pro";
+  }
+  .invite_button {
+    place-self: center;
+    background-color: #f4f1e8;
+    width: 190px;
+    height: 50px;
+
+    border-radius: 2rem;
+    text-align: center;
+  }
+
+  .invite_button p {
+    padding-top: 6%;
+    font-size: 12px;
+  }
+  .invite_button:hover {
+    background-color: #393903;
+
+    p {
+      color: #f4f1e8;
+    }
+  }
+  .paragraph_1,
+  .paragraph_2 {
+    /* margin-left: 50px;
+    margin-right: 50px; */
+    font-size: clamp(1rem, 2.5vw, 3rem);
+    width: 60vw;
+    margin: 0 auto;
+    padding: 2rem;
+    font-weight: 200;
+  }
+  .paragraph_2 {
+    padding-bottom: 50px;
+  }
+  @media (width>764px) {
+    .invite_button {
+      width: 350px;
+      height: 70px;
+      border-radius: 3rem;
+    }
+
+    .invite_button p {
+      padding-top: 4%;
+      font-size: 19px;
+      line-height: 1;
+    }
+  }
+</style>
+
+<section>
+  <div class="saloner_paragraph">
+    <h3>SALONER I 2025</h3>
+    <p class="p_info">Tønsbergvej 70, Roskilde</p>
+    <div class="grid_button">
+      <button class="button">
+        <a href="oove">26. MAJ KL. 20:00 - 21:30</a>
+      </button>
+
+      <button class="button">
+        <a href="oove">24. JUNI KL. 20:00 - 22:00</a>
+      </button>
+    </div>
+  </div>
+</section>
+<style>
+  * {
+    margin: 0 0 0 0;
+    padding: 0;
+  }
+  section {
+    text-align: center;
+    /* padding-top: 50px; */
+    padding-bottom: 40px;
+  }
+  .saloner_paragraph {
+    max-width: 100%;
+  }
+  h3 {
+    color: #393903;
+    font-size: 40px;
+
+    font-family: "Crimson Pro";
+    font-weight: 300;
+  }
+  .p_info {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    color: #393903;
+    font-family: "Crimson Pro";
+    padding-bottom: 3%;
+  }
+
+  .grid_button {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #d7d8c9;
+    text-decoration: none;
+    color: #393903;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    cursor: pointer;
+    font-family: "Crimson Pro", serif;
+    width: 50vw;
+    padding: 1rem;
+    margin: 0 auto;
+    border-radius: 1rem;
+    border: none;
+  }
+
+  .button a {
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+  }
+
+  @media (width>764px) {
+    .grid_button {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      border-radius: 1rem;
+    }
+    p {
+      font-size: 20px;
+    }
+    .button {
+      width: 90%;
+      margin: 0 auto;
+    }
+    .button:hover {
+      background-color: #393903;
+      color: #d7d8c9;
+      transition: 0.4s ease;
+    }
+
+    h3 {
+      font-size: 80px;
+    }
+  }
+</style>

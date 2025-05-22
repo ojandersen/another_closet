@@ -1,0 +1,110 @@
+---
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import Banner from "../components/banner.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout>
+  <Header />
+  <div class="hero_pic">
+    <img src="/omos.svg" alt="" />
+  </div>
+
+  <Banner />
+  <section class="section_1">
+    <h2 class="omos1_h2">HVEM ER VI?</h2>
+    <p class="omos1_p">
+      Vi tror på, at fremtidens garderobe ikke handler om at eje mest muligt,
+      men om at dele, genbruge og finde glæde i det, vi allerede har. Hos
+      Another Closet skaber vi en ny måde at tænke mode på: En tøjkultur, hvor
+      fællesskab, kreativitet og bæredygtighed går hånd i hånd.
+    </p>
+  </section>
+  <section class="section_2">
+    <h2 class="omos2_h2">ET FÆLLESSKAB MED STIL OG MENING</h2>
+    <p class="omos2_p">
+      Vores kollektioner består af tøj, der tidligere har hængt i garderober
+      rundt omkring i landet, og som nu får nyt liv i vores fællesskab. Det hele
+      foregår i vores lokale tøjsaloner, hvor du som medlem kan:
+    </p>
+    <ul class="omos_ul">
+      <li>Låne og returnere tøj hver måned</li>
+      <li>
+        Deltage i events og workshops om stil, upcycling og bevidst forbrug
+      </li>
+      <li>
+        Blive en del af et stærkt netværk af andre modeelskere, der går op i
+        bæredygtighed
+      </li>
+    </ul>
+  </section>
+  <section class="section_3">
+    <h2 class="omos3_h2">VORES MISSION</h2>
+    <p class="omos3_p">
+      Vi ønsker at gøre op med den lineære modeindustri, hvor tøj alt for
+      hurtigt ender som affald. I stedet vil vi inspirere til en mere cirkulær
+      og bevidst tilgang til garderoben. <br />
+      <br />
+      Når du låner tøj gennem Another Closet, reducerer du tøjspild, sparer ressourcer
+      og giver dit tøj flere liv.
+    </p>
+  </section>
+  <Banner />
+  <style>
+    html,
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: "Crimson Pro";
+    }
+    .hero_pic img {
+      width: 100%;
+      display: block;
+    }
+    .section_1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #f2dfd5;
+    }
+    .section_2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #393903;
+      color: white;
+    }
+    .section_3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .omos3_h2,
+    .omos2_h2,
+    .omos1_h2 {
+      margin: 4% 4% 0% 4%;
+      font-size: 38px;
+      font-weight: 200;
+      text-align: center;
+    }
+    .omos3_p,
+    .omos2_p,
+    .omos1_p {
+      margin: 4%;
+      text-align: center;
+      width: 85%;
+      line-height: 150%;
+    }
+    ul {
+      text-align: center;
+      list-style-position: inside;
+      margin: 0% 4% 4% 4%;
+      line-height: 160%;
+    }
+  </style>
+  <Footer />
+</Layout>

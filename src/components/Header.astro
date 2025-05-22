@@ -1,6 +1,7 @@
 ---
 
 ---
+
 <section class="header_content">
   <a href="/" class="overskrift">ANOTHER CLOSET</a>
   <section class="menu_liste">
@@ -22,7 +23,7 @@
       <li class="bm"><a href="">BLIV MEDLEM</a></li>
       <li><a href="">FIND DIT TØJFÆLLESSKAB</a></li>
       <li><a href="">TØJ TIL LEJE</a></li>
-      <li><a href="">OM OS</a></li>
+      <li><a href="/omos">OM OS</a></li>
       <li class="logind"><a href="">LOG IND</a></li>
       <li class="no-style">______________________</li>
       <section class="icons_menu">
@@ -41,8 +42,8 @@
     margin: 0;
     font-family: "Crimson Pro";
   }
- 
-a {
+
+  a {
     text-decoration: none;
   }
   header {
@@ -64,12 +65,13 @@ a {
     font-size: 20px;
     font-family: "Crimson Pro";
     color: #393903;
+    letter-spacing: 5px;
   }
   .menu_liste {
     display: none;
-  margin-left: auto;
-  padding-right: 40px; /* Juster afstanden til højre */
-}
+    margin-left: auto;
+    padding-right: 40px; /* Juster afstanden til højre */
+  }
 
   .hero_pic img {
     width: 100%;
@@ -77,10 +79,10 @@ a {
   }
 
   .burger-menu {
-  margin-right: 2%; /* Optional: Adjust spacing from the right */
-  display: flex; /* Ensures proper alignment of its children */
-  align-items: center; /* Aligns the menu icon vertically */
-}
+    margin-right: 2%; /* Optional: Adjust spacing from the right */
+    display: flex; /* Ensures proper alignment of its children */
+    align-items: center; /* Aligns the menu icon vertically */
+  }
 
   .menu-icon {
     display: flex;
@@ -107,50 +109,52 @@ a {
   }
 
   #menu-toggle:checked + .menu-icon span:nth-child(1) {
-  transform: rotate(45deg) translate(6.5px, 5px);
-}
+    transform: rotate(45deg) translate(6.5px, 5px);
+  }
 
-#menu-toggle:checked + .menu-icon span:nth-child(2) {
-  opacity: 0;
-}
+  #menu-toggle:checked + .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
 
-#menu-toggle:checked + .menu-icon span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -5px);
-}
+  #menu-toggle:checked + .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -5px);
+  }
 
   .menu {
-  list-style: none;
-  margin: 0;
-  padding: 30px;
-  padding-top: 13%;
-  background: #d7d8c9;
-  color: #393903;
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 300px;
-  text-align: center;
-  font-size: 30px;
-  z-index: 4;
-  display: flex;
-  flex-direction: column; 
-  align-items: center;     
+    list-style: none;
+    margin: 0;
+    padding: 30px;
+    padding-top: 13%;
+    background: #d7d8c9;
+    color: #393903;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    text-align: center;
+    font-size: 30px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  /* Skjul med transform */
-  transform: translateX(100%);
-  opacity: 0;
-  pointer-events: none;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
+    /* Skjul med transform */
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+  }
 
-#menu-toggle:checked ~ .menu {
-  transform: translateX(0);
-  opacity: 1;
-  pointer-events: auto;
-}
+  #menu-toggle:checked ~ .menu {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
 
-.menu_overskrift {
+  .menu_overskrift {
     font-size: 33px;
   }
   .menu li {
@@ -158,10 +162,10 @@ a {
     font-size: 24px;
   }
   .menu li.no-style {
-  padding: 0 !important; /* Tvinger padding til at være 0 */
-  margin: 0;
-  list-style: none;
-}
+    padding: 0 !important; /* Tvinger padding til at være 0 */
+    margin: 0;
+    list-style: none;
+  }
   .menu a {
     text-decoration: none;
     color: #393903;
@@ -181,29 +185,29 @@ a {
     cursor: pointer;
   }
   @media (min-width: 840px) {
-  .overskrift {
-    margin: 1.2%;
-    font-size: 24px; /* Adjust the font size for the header text */
+    .overskrift {
+      margin: 1.2%;
+      font-size: 24px; /* Adjust the font size for the header text */
+    }
+    .menu_liste {
+      display: block;
+    }
+    .bm,
+    .logind {
+      display: none;
+    }
+    .menu li {
+      font-size: 30px;
+    }
+    .menu_overskrift {
+      font-size: 33px;
+      margin: 20px 0;
+    }
+    .menu {
+      padding-top: 7.5%;
+    }
+    .desk_points li {
+      cursor: pointer;
+    }
   }
-  .menu_liste{
-    display: block;
-  }
-  .bm, .logind {
-    display: none;
-  }
-  .menu li{
-    font-size: 30px;
-  }
-  .menu_overskrift {
-  font-size: 33px;
-  margin: 20px 0;
-}
-.menu{
-  padding-top: 7.5%;
-}
-.desk_points li{
-  cursor: pointer;
-}
-}
-
 </style>

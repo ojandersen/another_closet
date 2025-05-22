@@ -1,0 +1,90 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<section>
+  <div class="invite_paragraph">
+    <h2>SKAL DU TIL EN HELT SPECIEL FEST?</h2>
+    <p class="paragraph_2">
+      De kommende måneder tester vi udlejning af en række eksklusive kjoler og sæt (med en oprindelig udsalgspris på op til 3000 kr). <br />
+      <br />Det koster 300 kr. at leje i en uge – fra torsdag til torsdag. <br /><br />Du skal selv hente og aflevere, klar til en ny bruger i vores bemandede showroom på Nørrebro torsdag mellem kl. 16 og 18 - eller lave en anden aftale med os. <br
+      /><br />Vi tester med et lille udvalg af tøj, men hvis I tager godt imod det, vil vi tilføje nye styles. I er med til at bestemme hvilke, det skal være. <br /><br />Tøjet kan prøves til en af salonerne på Nørrebro og reserveres + betales, så du
+      er 100 % sikker på, at det passer og er ledigt til dig, når du skal bruge det. <br /><br />Leje er kun for medlemmer af Another Closet!
+    </p>
+    <div class="invite_button">
+      <p>
+        MODTAG INFORMATION <br />
+        GRATIS OG UFORPLIGTENDE
+      </p>
+    </div>
+  </div>
+</section>
+<style>
+  section {
+    text-align: center;
+  }
+  .invite_paragraph {
+    width: 100%;
+    background-color: #f2dfd5;
+    padding-top: 3%;
+    padding-bottom: 3%;
+  }
+  h2 {
+    color: #393903;
+    font-size: 20px;
+    font-size: clamp(1rem, 5vw, 6rem);
+    font-family: "Crimson Pro";
+    font-weight: 300;
+  }
+  p {
+    color: #393903;
+    font-size: 10px;
+    padding-top: 3px;
+    font-family: "Crimson Pro";
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .invite_button {
+    place-self: center;
+    background-color: #f4f1e8;
+    width: 190px;
+    height: 50px;
+
+    border-radius: 2rem;
+    text-align: center;
+  }
+
+  .invite_button p {
+    padding-top: 6%;
+    font-size: 12px;
+  }
+  .invite_button:hover {
+    background-color: #393903;
+
+    p {
+      color: #f4f1e8;
+    }
+  }
+  .paragraph_1,
+  .paragraph_2 {
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    font-weight: 200;
+  }
+  .paragraph_2 {
+    padding-bottom: 10px;
+  }
+  @media (width>764px) {
+    .invite_button {
+      width: 400px;
+      height: 90px;
+      border-radius: 3rem;
+    }
+
+    .invite_button p {
+      padding-top: 4%;
+      font-size: 25px;
+    }
+  }
+</style>

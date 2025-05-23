@@ -6,11 +6,9 @@ import Banner from "../../components/Banner.astro";
 import Listeview from "../../components/Listeview.astro";
 import Header from "../../components/Header.astro";
 
-const curl =
-  "https://weydcspvvunwbeoolpli.supabase.co/rest/v1/AnotherCloset?category=eq.cloths";
+const curl = "https://weydcspvvunwbeoolpli.supabase.co/rest/v1/AnotherCloset?category=eq.cloths";
 
-const apikey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndleWRjc3B2dnVud2Jlb29scGxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2NDY5MDMsImV4cCI6MjA2MzIyMjkwM30.n23gpeZ4XikBpL5r_vuSYntCRJLQ7lqiLq92_HovPJo";
+const apikey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndleWRjc3B2dnVud2Jlb29scGxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2NDY5MDMsImV4cCI6MjA2MzIyMjkwM30.n23gpeZ4XikBpL5r_vuSYntCRJLQ7lqiLq92_HovPJo";
 
 const options = {
   headers: {
@@ -22,11 +20,9 @@ const data = await fetch(curl, options).then((response) => response.json());
 console.log(data);
 
 export async function getStaticPaths() {
-  const curl =
-    "  https://weydcspvvunwbeoolpli.supabase.co/rest/v1/AnotherCloset?select=*";
+  const curl = "  https://weydcspvvunwbeoolpli.supabase.co/rest/v1/AnotherCloset?select=*";
 
-  const apikey =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndleWRjc3B2dnVud2Jlb29scGxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2NDY5MDMsImV4cCI6MjA2MzIyMjkwM30.n23gpeZ4XikBpL5r_vuSYntCRJLQ7lqiLq92_HovPJo";
+  const apikey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndleWRjc3B2dnVud2Jlb29scGxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2NDY5MDMsImV4cCI6MjA2MzIyMjkwM30.n23gpeZ4XikBpL5r_vuSYntCRJLQ7lqiLq92_HovPJo";
 
   const options = {
     headers: {
@@ -92,6 +88,10 @@ const { post } = Astro.props;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
     margin: 2%;
+  }
+
+  p {
+    font-weight: 200;
   }
 
   @media (min-width: 640px) and (max-width: 1024px) {

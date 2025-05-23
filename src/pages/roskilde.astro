@@ -7,7 +7,7 @@ import Medlem from "../components/medlem.astro";
 import Roskilde_afsnit from "../components/Roskilde_afsnit.astro";
 import Listeview from "../components/Listeview.astro";
 import Hero2 from "../components/Hero2.astro";
-
+import Header from "../components/Header.astro";
 const curl = "https://weydcspvvunwbeoolpli.supabase.co/rest/v1/AnotherCloset?category=eq.cloths";
 
 const apikey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndleWRjc3B2dnVud2Jlb29scGxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2NDY5MDMsImV4cCI6MjA2MzIyMjkwM30.n23gpeZ4XikBpL5r_vuSYntCRJLQ7lqiLq92_HovPJo";
@@ -23,9 +23,7 @@ console.log(data);
 ---
 
 <Layout>
-  <Hero2 />
-  <Banner />
-  <!-- <Tekststykke_1 /> -->
+  <Header />
   <Roskilde_afsnit />
   <h1>TØJ FRA TØJFÆLLESSKABET</h1>
   <section class="card_grid">

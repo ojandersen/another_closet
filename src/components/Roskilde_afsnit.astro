@@ -1,24 +1,42 @@
+---
+import Banner from "./banner.astro";
+---
+
 <section>
   <div class="invite_paragraph">
-    <h2>KLÆDESKABET PÅ <br /> ROSKILDE</h2>
-    <p class="paragraph_2">Tag en ven under armen, og kom og hør mere til vores <br /> tøjbyttesalon. Oplev glæden ved at dele frem for at købe!</p>
+    <h2>KLÆDESKABET I <br /> ROSKILDE</h2>
+
+    <p class="paragraph_2">
+      Kom og lån tre lækre forårsstyles – og lad andre medlemmer få glæde af det tøj, du ikke længere bruger! <br />
+      <br /> Tag en ven under armen, og kom og hør mere til vores tøjbyttesalon. Oplev glæden ved at dele frem for at købe!  <br />
+      <br />Vi sørger for øl, bobler og snacks. Alle er velkomne, og du deltager bare i det tidsrum, det passer ind i din dag
+    </p>
     <div class="invite_button">
       <p>
         MODTAG INFORMATION <br />
         GRATIS OG UFORPLIGTENDE
       </p>
     </div>
+    <img src="/public/communitypic.svg" alt="Billede fra klædeskab" />
   </div>
+  <Banner />
 </section>
+
 <style>
   section {
     text-align: center;
   }
   .invite_paragraph {
     width: 100%;
-    background-color: #f2dfd5;
+    background-color: hsl(21, 53%, 89%);
     padding-top: 3%;
     padding-bottom: 3%;
+  }
+
+  .invite_paragraph img {
+    width: 75%;
+    border-radius: 10px;
+    margin-top: 4%;
   }
   h2 {
     color: #393903;
@@ -27,7 +45,7 @@
     font-family: "Crimson Pro";
     font-weight: 300;
     line-height: 0.9;
-    padding-top: 2rem;
+    padding-top: 1%;
   }
   p {
     color: #393903;
@@ -67,7 +85,8 @@
     font-weight: 200;
   }
   .paragraph_2 {
-    padding-bottom: 50px;
+    padding-bottom: 5%;
+    padding-top: 3%;
   }
   @media (width>764px) {
     .invite_button {
@@ -81,21 +100,30 @@
       font-size: 19px;
       line-height: 1;
     }
+
+    .paragraph_2 {
+      font-size: 30px;
+    }
+
+    .invite_paragraph img {
+      width: 70%;
+      border-radius: 20px;
+    }
+
+    h2 {
+      font-size: 80px;
+    }
   }
 </style>
 
-<section>
+<section class="salon_baggrund">
   <div class="saloner_paragraph">
     <h3>SALONER I 2025</h3>
     <p class="p_info">Tønsbergvej 70, Roskilde</p>
     <div class="grid_button">
-      <button class="button">
-        <a href="oove">26. MAJ KL. 20:00 - 21:30</a>
-      </button>
+      <button class="button"> 26. MAJ KL. 20:00 - 21:30 </button>
 
-      <button class="button">
-        <a href="oove">24. JUNI KL. 20:00 - 22:00</a>
-      </button>
+      <button class="button"> 24. JUNI KL. 20:00 - 22:00 </button>
     </div>
   </div>
 </section>
@@ -107,11 +135,20 @@
   section {
     text-align: center;
     /* padding-top: 50px; */
-    padding-bottom: 40px;
   }
   .saloner_paragraph {
     max-width: 100%;
+    padding-top: 2%;
+    padding-bottom: 1%;
   }
+
+  .salon_baggrund {
+    background-color: #d7d8c9;
+    padding-top: 2%;
+    padding-bottom: 4%;
+    margin-bottom: 8%;
+  }
+
   h3 {
     color: #393903;
     font-size: 40px;
@@ -135,16 +172,16 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    background-color: #d7d8c9;
+    background-color: #393903;
     text-decoration: none;
-    color: #393903;
+    color: #f4f1e8;
     font-size: clamp(1rem, 2.5vw, 2rem);
     cursor: pointer;
     font-family: "Crimson Pro", serif;
     width: 50vw;
     padding: 1rem;
     margin: 0 auto;
-    border-radius: 1rem;
+    border-radius: 10px;
     border: none;
   }
 
@@ -155,18 +192,13 @@
   }
 
   @media (width>764px) {
-    .grid_button {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      justify-content: center;
-      border-radius: 1rem;
-    }
     p {
       font-size: 20px;
     }
     .button {
-      width: 90%;
+      width: 40vw;
       margin: 0 auto;
+      border-radius: 20px;
     }
     .button:hover {
       background-color: #393903;
@@ -176,6 +208,10 @@
 
     h3 {
       font-size: 80px;
+    }
+
+    .salon_baggrund {
+      margin-bottom: 6%;
     }
   }
 </style>

@@ -10,9 +10,7 @@ import Layout from "../layouts/Layout.astro";
       Lån 3 unikke stykker tøj hver måned for kun 149 kr.
     </p>
     <a href="/community"
-      ><div class="button">
-        <p>SE MERE OM <br />TØJFÆLLESSKABER HER</p>
-      </div></a
+      ><button>SE MERE OM <br />TØJFÆLLESSKABER HER</button></a
     >
   </div>
   <div class="medlemmer_billed">
@@ -39,9 +37,12 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .medlemmer_tekst {
-    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
     height: auto;
     margin: 0 auto;
+    text-align: center;
   }
 
   .p_medlem {
@@ -76,23 +77,25 @@ import Layout from "../layouts/Layout.astro";
 
   a {
     text-decoration: none;
+    cursor: auto;
   }
 
-  .button {
-    place-self: center;
+  button {
+    margin-top: 2%;
+    font-family: "Crimson Pro", serif;
     background-color: #393903;
-    width: 190px;
-    height: 50px;
-    border-radius: 2rem;
-    text-align: center;
+    color: white;
+    border: solid 1px #393903;
+    border-radius: 40px;
+    width: clamp(290px, 50%, 330px);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.1rem;
   }
-
-  .button p {
-    color: #f4f1e8;
-    padding-top: 5%;
-    font-size: 12px;
-    letter-spacing: 1px;
-    font-weight: 600;
+  button:hover {
+    background-color: #f4f1e8;
+    cursor: pointer;
+    color: #393903;
   }
 
   @media (min-width: 800px) {
@@ -122,23 +125,39 @@ import Layout from "../layouts/Layout.astro";
     }
     .p_medlem {
       font-size: 30px;
-      width: 70%;
+      width: 90%;
       margin-top: 30px;
     }
-
-    .button {
-      background-color: #393903;
-      width: 300px;
-      height: 80px;
-      border-radius: 4rem;
-      text-align: center;
-      margin-bottom: 10%;
+  }
+  @media (min-width: 800px) and (max-width: 1033px) {
+    .p_medlem {
+      font-size: 27px;
     }
-
-    .button p {
-      color: #f4f1e8;
-      padding-top: 5%;
-      font-size: 20px;
+    button {
+      margin-top: 5%;
+    }
+  }
+  @media (max-width: 800px) {
+    button {
+      padding: 0.7rem;
+      margin-top: 1%;
+      width: clamp(220px, 50%, 290px);
+      font-size: 14px;
+    }
+    .p_medlem {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    .medlemmer_tekst h2 {
+      margin-top: 15%;
+    }
+    .medlemmer_tekst {
+      gap: 1rem;
+    }
+  }
+  @media (min-width: 800px) and (max-width: 880px) {
+    .medlemmer_tekst {
+      gap: 0.2rem;
     }
   }
 </style>

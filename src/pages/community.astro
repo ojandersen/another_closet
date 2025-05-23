@@ -6,7 +6,11 @@ import Hero from "../components/Hero.astro";
 import Medlem from "../components/medlem.astro";
 import Afsnit from "../components/afsnit.astro";
 import Listeview from "../components/Listeview.astro";
+
+import Hero2 from "../components/Hero2.astro";
+
 import Dinby from "../components/dinby.astro";
+
 
 const curl = "https://weydcspvvunwbeoolpli.supabase.co/rest/v1/AnotherCloset?category=eq.cloths";
 
@@ -23,7 +27,7 @@ console.log(data);
 ---
 
 <Layout>
-  <Hero />
+  <Hero2 />
   <Banner />
   <Afsnit />
   <Dinby />

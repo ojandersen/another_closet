@@ -65,7 +65,7 @@ const { post } = Astro.props;
     </div>
   </section>
   <Banner />
-  <h1>Medlemmernes <br />favoritter</h1>
+  <h1>Se flere favoritter</h1>
   <section class="card_grid">
     {data.map((product) => <Listeview {product} />)}
   </section>
@@ -81,6 +81,7 @@ const { post } = Astro.props;
     font-weight: 300;
     margin-bottom: 0;
     font-size: 32px;
+    margin-top: 8%;
   }
 
   .card_grid {
@@ -97,6 +98,7 @@ const { post } = Astro.props;
   @media (min-width: 640px) and (max-width: 1024px) {
     h1 {
       font-size: 50px;
+      margin-top: 5%;
     }
 
     .card_grid {
@@ -113,6 +115,7 @@ const { post } = Astro.props;
 
     h1 {
       font-size: 84px;
+      margin-top: 5%;
     }
   }
 

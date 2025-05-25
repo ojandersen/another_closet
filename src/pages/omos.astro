@@ -22,12 +22,9 @@ import Footer from "../components/Footer.astro";
   <section class="section_2">
     <h2 class="omos2_h2">ET FÆLLESSKAB MED STIL OG MENING</h2>
     <p class="omos2_p">Vores kollektioner består af tøj, der tidligere har hængt i garderober rundt omkring i landet, og som nu får nyt liv i vores fællesskab. <br /> <br /> Det hele foregår i vores lokale tøjsaloner, hvor du som medlem kan:</p>
-    <ul class="omos_ul">
-      <li>Låne og returnere tøj hver måned</li>
-      <li>Deltage i events og workshops om stil, upcycling og bevidst forbrug</li>
-      <li>Blive en del af et stærkt netværk af andre modeelskere, der går op i bæredygtighed</li>
-    </ul>
+    <p>Låne og returnere tøj hver måned. <br />Deltage i events og workshops om stil, upcycling og bevidst forbrug. <br /> Blive en del af et stærkt netværk af andre modeelskere, der går op i bæredygtighed.</p>
   </section>
+
   <section class="section_3">
     <div>
       <h2 class="omos3_h2">VORES MISSION</h2>
@@ -40,148 +37,143 @@ import Footer from "../components/Footer.astro";
     <img src="../omos2.svg" alt="omos" />
   </section>
   <Banner />
-  <style>
-    html,
-    * {
-      padding: 0;
-      margin: 0;
-      font-family: "Crimson Pro";
-    }
+</Layout>
+<style>
+  html,
+  * {
+    padding: 0;
+    margin: 0;
+    font-family: "Crimson Pro";
+  }
 
+  .section_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #d7d8c9;
+    color: #393903;
+  }
+  .section_1 img {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    object-fit: contain;
+    height: 20%;
+
+    padding: 2rem;
+  }
+  .section_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f2dfd5;
+    color: #393903;
+  }
+  .section_2 h2 {
+    font-weight: 300;
+    text-align: center;
+    font-size: clamp(2rem, 6vw, 8rem);
+    margin: 0 auto;
+    width: 90vw;
+    line-height: 1.1;
+    padding-top: 8%;
+    padding-bottom: 2rem;
+  }
+
+  .section_2 p {
+    text-align: center;
+    width: 85%;
+    line-height: 1.3;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    font-weight: 200;
+    margin: 0 auto;
+
+    padding-bottom: 2rem;
+  }
+
+  .section_3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f4f1e8;
+    color: #393903;
+  }
+  .omos3_h2,
+  .omos1_h2 {
+    font-weight: 300;
+    text-align: center;
+    font-size: clamp(2rem, 6vw, 8rem);
+    margin: 0 auto;
+
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+  .omos3_p,
+  .omos1_p {
+    text-align: center;
+    width: 85%;
+    line-height: 1.3;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    font-weight: 200;
+    margin: 0 auto;
+  }
+
+  .section_3 img {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    object-fit: contain;
+    height: 20%;
+    padding: 2rem;
+  }
+
+  @media (min-width: 640px) {
     .section_1 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background-color: #d7d8c9;
-      color: #393903;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
     .section_1 img {
-      text-align: center;
       width: 80%;
+      height: 80%;
       margin: 0 auto;
       object-fit: contain;
-      height: 20%;
-
-      padding: 2rem;
+    }
+    .section_1_text {
+      padding-bottom: 5rem;
     }
     .section_2 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background-color: #f2dfd5;
-      color: #393903;
-    }
-    .section_2 h2 {
-      font-weight: 300;
-      text-align: center;
-      font-size: clamp(2rem, 6vw, 8rem);
-      margin: 0 auto;
-      width: 90vw;
-      line-height: 1.1;
-      padding-top: 2rem;
       padding-bottom: 2rem;
-    }
-
-    .section_2 p {
-      text-align: center;
-      width: 85%;
-      line-height: 1.3;
-      font-size: clamp(1.2rem, 2.5vw, 2rem);
-      font-weight: 200;
-      margin: 0 auto;
-
-      padding-bottom: 2rem;
-    }
-    .omos_ul {
-      text-align: center;
-      list-style-position: inside;
-      line-height: 1.1;
-      width: 85vw;
-      font-size: clamp(1.2rem, 2.5vw, 2rem);
-      font-weight: 200;
-      padding-bottom: 2rem;
-      margin: 0 auto;
-    }
-    .section_3 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background-color: #f4f1e8;
-      color: #393903;
-    }
-    .omos3_h2,
-    .omos1_h2 {
-      font-weight: 300;
-      text-align: center;
-      font-size: clamp(2rem, 6vw, 8rem);
-      margin: 0 auto;
-
-      padding-bottom: 2rem;
-      padding-top: 2rem;
     }
     .omos3_p,
+    .omos2_p,
     .omos1_p {
-      text-align: center;
-      width: 85%;
-      line-height: 1.3;
-      font-size: clamp(1.2rem, 2.5vw, 2rem);
-      font-weight: 200;
-      margin: 0 auto;
+      line-height: 1.2;
+      padding-left: 3rem;
     }
-
+    .omos3_h2,
+    .omos2_h2,
+    .omos1_h2 {
+      padding-top: 0rem;
+      padding-left: 3rem;
+    }
+    .section_3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
     .section_3 img {
-      text-align: center;
       width: 80%;
+      height: 80%;
       margin: 0 auto;
       object-fit: contain;
-      height: 20%;
-      padding: 2rem;
+      grid-column: 2 / 3;
     }
 
-    @media (min-width: 640px) {
-      .section_1 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
-      .section_1 img {
-        width: 80%;
-        height: 80%;
-        margin: 0 auto;
-        object-fit: contain;
-      }
-      .section_1_text {
-        padding-bottom: 5rem;
-      }
-      .section_2 {
-        padding-bottom: 2rem;
-      }
-      .omos3_p,
-      .omos2_p,
-      .omos1_p {
-        line-height: 1.2;
-        padding-left: 3rem;
-      }
-      .omos3_h2,
-      .omos2_h2,
-      .omos1_h2 {
-        padding-top: 0rem;
-        padding-left: 3rem;
-      }
-      .section_3 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
-      .section_3 img {
-        width: 80%;
-        height: 80%;
-        margin: 0 auto;
-        object-fit: contain;
-        grid-column: 2 / 3;
-      }
+    .section_2 h2 {
+      padding-top: 5%;
     }
-  </style>
-  <Footer />
-</Layout>
+  }
+</style>
+<Footer />

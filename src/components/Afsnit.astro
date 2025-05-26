@@ -17,13 +17,13 @@ const {} = Astro.props;
 <section class="afsnit3">
   <h2>FIND DIT TØJFÆLLESSKAB TÆT PÅ DIG</h2>
   <div class="button_afsnit">
-    <a href="/roskilde"><button>ROSKILDE</button></a>
-    <a href="/ribe"><button>RIBE</button></a>
+    <a class="button" href="/roskilde">ROSKILDE</a>
+    <a class="button" href="/ribe">RIBE</a>
   </div>
   <div class="button_afsnit2">
-    <a href="/fredericia"><button>FREDERICIA</button></a>
+    <a class="button" href="/fredericia">FREDERICIA</a>
 
-    <a href="/norrebro"><button>NØRREBRO</button></a>
+    <a class="button" href="/norrebro">NØRREBRO</a>
   </div>
 
   <style>
@@ -83,7 +83,7 @@ const {} = Astro.props;
       gap: 0.7rem;
     }
 
-    button {
+    .button {
       display: flex;
       justify-content: center;
       text-align: center;
@@ -101,7 +101,7 @@ const {} = Astro.props;
       letter-spacing: 0.2rem;
     }
 
-    button a {
+    a {
       text-decoration: none;
       color: inherit;
       /* width: 100%; */
@@ -112,7 +112,7 @@ const {} = Astro.props;
       font-weight: 200;
     }
 
-    a {
+    .button a {
       text-decoration: none;
     }
 
@@ -125,12 +125,12 @@ const {} = Astro.props;
         margin: 0 auto;
       }
 
-      button {
+      .button {
         width: 90%;
         margin: 0 auto;
         letter-spacing: 0.5rem;
       }
-      button:hover {
+      .button:hover {
         background-color: #393903;
         color: #d7d8c9;
         transition: 0.4s ease;

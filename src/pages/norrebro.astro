@@ -42,7 +42,7 @@ console.log(data);
     font-family: "Crimson Pro";
     font-weight: 300;
     margin-bottom: 0;
-    font-size: 32px;
+    font-size: clamp(2rem, 6vw, 8rem);
   }
 
   .card_grid {
@@ -53,10 +53,6 @@ console.log(data);
   }
 
   @media (min-width: 640px) and (max-width: 1024px) {
-    h1 {
-      font-size: 50px;
-    }
-
     .card_grid {
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       margin: 1%;
@@ -67,10 +63,6 @@ console.log(data);
     .card_grid {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       margin: 1%;
-    }
-
-    h1 {
-      font-size: 84px;
     }
   }
 </style>

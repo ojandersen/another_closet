@@ -80,7 +80,7 @@ const { post } = Astro.props;
     font-family: "Crimson Pro";
     font-weight: 300;
     margin-bottom: 0;
-    font-size: 32px;
+    font-size: clamp(2rem, 6vw, 8rem);
     margin-top: 8%;
   }
 
@@ -97,7 +97,7 @@ const { post } = Astro.props;
 
   @media (min-width: 640px) and (max-width: 1024px) {
     h1 {
-      font-size: 50px;
+      font-size: clamp(2rem, 6vw, 8rem);
       margin-top: 5%;
     }
 
@@ -114,7 +114,7 @@ const { post } = Astro.props;
     }
 
     h1 {
-      font-size: 84px;
+      font-size: clamp(2rem, 6vw, 8rem);
       margin-top: 5%;
     }
   }

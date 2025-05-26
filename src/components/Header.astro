@@ -17,19 +17,22 @@
       <span></span>
       <span></span>
     </label>
-    <ul class="menu">
-      <p class="menu_overskrift"><a href="/">ANOTHER CLOSET</a></p>
+    <section class="menu">
+      <h3 class="menu_overskrift"><a href="/">ANOTHER CLOSET</a></h3>
       <hr class="linje" />
-      <li class="bm"><a href="">BLIV MEDLEM</a></li>
-      <li><a href="/community">FIND DIT TØJFÆLLESSKAB</a></li>
-      <li><a href="/tilleje">TØJ TIL LEJE</a></li>
-      <li><a href="/omos">OM OS</a></li>
-      <li class="logind"><a href="">LOG IND</a></li>
+      <a class="bm" href="">BLIV MEDLEM</a>
+      <a href="/community">FIND DIT TØJFÆLLESSKAB</a>
+      <a href="/tilleje">TØJ TIL LEJE</a>
+      <a href="/omos">OM OS</a>
+      <a class="logind" href="">LOG IND</a>
       <hr class="linje" />
       <section class="icons_menu">
-        <img src="/logo-facebook.svg" alt="" /><img src="/logo-instagram.svg" alt="" />
+        <img src="/logo-facebook.svg" alt="" /><img
+          src="/logo-instagram.svg"
+          alt=""
+        />
       </section>
-    </ul>
+    </section>
   </nav>
 </section>
 <style>
@@ -63,6 +66,12 @@
     list-style: none;
     display: flex;
     gap: 0.9rem;
+  }
+  li {
+    color: #393903;
+    font-family: "Crimson Pro";
+    letter-spacing: 1px;
+    font-size: 20px;
   }
   .overskrift {
     margin: 2%;
@@ -100,12 +109,6 @@
     z-index: 100;
   }
 
-  li {
-    color: #393903;
-    font-family: "Crimson Pro";
-    letter-spacing: 1px;
-    font-size: 20px;
-  }
   .menu-icon span {
     display: block;
     height: 1px;
@@ -150,8 +153,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    /* Skjul med transform */
+    gap: 1.5rem;
     transform: translateX(100%);
     opacity: 0;
     pointer-events: none;
@@ -166,22 +168,20 @@
     pointer-events: auto;
   }
 
-  .menu_overskrift {
+  h3.menu_overskrift a {
     font-size: 24px;
     letter-spacing: 1px;
     font-weight: 200;
   }
-  .menu li {
-    padding: 12px;
-    font-size: 18px;
-    font-weight: 200;
-  }
-  .menu li.no-style {
+  .menu a.no-style {
     padding: 0 !important; /* Tvinger padding til at være 0 */
     margin: 0;
     list-style: none;
   }
   .menu a {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 200;
     text-decoration: none;
     color: #393903;
     transition: color 0.2s;
@@ -213,16 +213,17 @@
     .logind {
       display: none;
     }
-    .menu li {
+    .menu a {
       font-size: 24px;
       padding: 20px;
     }
-    .menu_overskrift {
+    h3.menu_overskrift a {
       font-size: 28px;
       margin: 20px 0;
     }
     .menu {
       padding-top: 7.5%;
+      gap: 1.9rem;
     }
     .desk_points li {
       cursor: pointer;

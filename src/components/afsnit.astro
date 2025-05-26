@@ -17,20 +17,13 @@ const {} = Astro.props;
 <section class="afsnit3">
   <h2>FIND DIT TØJFÆLLESSKAB TÆT PÅ DIG</h2>
   <div class="button_afsnit">
-    <button>
-      <a href="/roskilde">ROSKILDE</a>
-    </button>
-    <button>
-      <a href="/ribe">RIBE</a>
-    </button>
+    <a href="/roskilde"><button>ROSKILDE</button></a>
+    <a href="/ribe"><button>RIBE</button></a>
   </div>
   <div class="button_afsnit2">
-    <button>
-      <a href="/fredericia">FREDERICIA</a>
-    </button>
-    <button>
-      <a href="/norrebro">NØRREBRO</a>
-    </button>
+    <a href="/fredericia"><button>FREDERICIA</button></a>
+
+    <a href="/noerrebro"><button>NØRREBRO</button></a>
   </div>
 
   <style>
@@ -117,6 +110,10 @@ const {} = Astro.props;
 
     p {
       font-weight: 200;
+    }
+
+    a {
+      text-decoration: none;
     }
 
     @media (min-width: 800px) {

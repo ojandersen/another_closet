@@ -10,7 +10,7 @@ import Layout from "../layouts/Layout.astro";
 
       Lej eksklusive kjoler og sæt for 300 kr. i én uge.
     </p>
-    <a href="/community"><button>SE MERE OM <br />TØJ TIL LEJE HER</button></a>
+    <a class="button" href="/community">SE MERE OM <br />TØJ TIL LEJE HER</a>
   </div>
   <div class="medlemmer_billed">
     <img src="/forside2.webp" alt="Billeder af venner" />
@@ -82,7 +82,7 @@ import Layout from "../layouts/Layout.astro";
     cursor: auto;
   }
 
-  button {
+  .button {
     margin-top: 2%;
     font-family: "Crimson Pro", serif;
     background-color: #f4f1e8;
@@ -93,8 +93,9 @@ import Layout from "../layouts/Layout.astro";
     padding-top: 1rem;
     padding-bottom: 1rem;
     font-size: 1.1rem;
+    margin: 0 auto;
   }
-  button:hover {
+  .button:hover {
     background-color: #393903;
     cursor: pointer;
     color: #f4f1e8;
@@ -137,12 +138,12 @@ import Layout from "../layouts/Layout.astro";
     .p_medlem {
       font-size: 24px;
     }
-    button {
+    .button {
       margin-top: 5%;
     }
   }
   @media (max-width: 800px) {
-    button {
+    .button {
       padding: 0.7rem;
       margin-top: 1%;
       width: clamp(220px, 50%, 290px);

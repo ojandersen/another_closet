@@ -31,7 +31,7 @@ import Footer from "../components/Footer.astro";
   </section>
 
   <section class="section_3">
-    <div>
+    <div class="section_3tekst">
       <h2 class="omos3_h2">VORES MISSION</h2>
       <p class="omos3_p">
         Vi ønsker at gøre op med den lineære modeindustri, hvor tøj alt for hurtigt ender som affald. I stedet vil vi inspirere til en mere cirkulær og bevidst tilgang til garderoben. <br />
@@ -58,6 +58,7 @@ import Footer from "../components/Footer.astro";
     flex-direction: column;
     background-color: #d7d8c9;
     color: #393903;
+    padding-bottom: 8%;
   }
   .section_1 img {
     text-align: center;
@@ -65,9 +66,13 @@ import Footer from "../components/Footer.astro";
     margin: 0 auto;
     object-fit: contain;
     height: 20%;
-
-    padding: 2rem;
+    border-radius: 10px;
   }
+
+  .section_1_text {
+    padding-bottom: 8%;
+  }
+
   .section_2 {
     display: flex;
     justify-content: center;
@@ -105,6 +110,11 @@ import Footer from "../components/Footer.astro";
     flex-direction: column;
     background-color: #f4f1e8;
     color: #393903;
+    padding-bottom: 8%;
+  }
+
+  .section_3tekst {
+    padding-bottom: 8%;
   }
   .omos3_h2,
   .omos1_h2 {
@@ -132,23 +142,25 @@ import Footer from "../components/Footer.astro";
     margin: 0 auto;
     object-fit: contain;
     height: 20%;
-    padding: 2rem;
+
+    border-radius: 10px;
   }
 
   @media (min-width: 640px) {
     .section_1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      padding-top: 5%;
+      padding-bottom: 5%;
     }
     .section_1 img {
       width: 80%;
-      height: 80%;
+      height: 100%;
       margin: 0 auto;
-      object-fit: contain;
+      object-fit: cover;
+      border-radius: 20px;
     }
-    .section_1_text {
-      padding-bottom: 5rem;
-    }
+
     .section_2 {
       padding-bottom: 2rem;
     }
@@ -167,13 +179,16 @@ import Footer from "../components/Footer.astro";
     .section_3 {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      padding-bottom: 5%;
+      padding-top: 5%;
     }
     .section_3 img {
       width: 80%;
-      height: 80%;
+      height: 100%;
       margin: 0 auto;
-      object-fit: contain;
+      object-fit: cover;
       grid-column: 2 / 3;
+      border-radius: 20px;
     }
 
     .section_2 h2 {

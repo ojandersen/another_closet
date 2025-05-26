@@ -6,11 +6,8 @@ import Layout from "../layouts/Layout.astro";
   <div class="medlemmer_tekst">
     <h2>DET SIGER MEDLEMMERNE</h2>
     <p class="p_medlem">
-      “For mig er det en del af et overordnet livsvalg, der handler om at
-      arbejde mindre, bo mindre og forbruge mindre. Another Closet bliver en
-      mulighed for at lege og eksperimentere med tøj i et sjovt, rummeligt og
-      bæredygtigt fællesskab uden at skulle løbe rundt i tilværelsen for at have
-      penge nok til det hele.” <br />
+      “For mig er det en del af et overordnet livsvalg, der handler om at arbejde mindre, bo mindre og forbruge mindre. Another Closet bliver en mulighed for at lege og eksperimentere med tøj i et sjovt, rummeligt og bæredygtigt fællesskab uden at
+      skulle løbe rundt i tilværelsen for at have penge nok til det hele.” <br />
       <br />
       <strong>-Lotte, medlem Roskilde</strong>
     </p>
@@ -72,6 +69,7 @@ import Layout from "../layouts/Layout.astro";
     height: auto;
     max-width: 100vw;
     object-fit: cover;
+    border-radius: 10px;
   }
   @media (min-width: 800px) {
     .medlem {
@@ -87,13 +85,15 @@ import Layout from "../layouts/Layout.astro";
       grid-column: 1 / 2;
       grid-row: 1;
       width: 50vw;
+      padding-top: 8%;
+      padding-bottom: 8%;
     }
     .medlemmer_billed img {
       width: 80%;
       height: auto;
-      padding-top: 8%;
-      padding-bottom: 8%;
+
       object-fit: cover;
+      border-radius: 20px;
     }
     .medlemmer_tekst h2 {
       font-size: clamp(3rem, 5vw, 8rem);

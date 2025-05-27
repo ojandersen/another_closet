@@ -6,6 +6,7 @@ import Listeview from "../components/Listeview.astro";
 import Tilleje from "../components/Tilleje.astro";
 import Header from "../components/Header.astro";
 import Hero3 from "../components/Hero3.astro";
+import Medlem2 from "../components/Medlem2.astro";
 
 const curl = "https://weydcspvvunwbeoolpli.supabase.co/rest/v1/AnotherCloset?category=eq.rent";
 
@@ -29,7 +30,7 @@ console.log(data);
   <section class="card_grid">
     {data.map((product) => <Listeview {product} />)}
   </section>
-
+  <Medlem2 />
   <Banner />
 </Layout>
 

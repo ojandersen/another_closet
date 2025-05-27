@@ -3,13 +3,14 @@
 import Layout from "../layouts/Layout.astro";
 import Banner from "../components/Banner.astro";
 import Hero from "../components/Hero.astro";
-import Medlem from "../components/Medlem.astro";
+import Medlem3 from "../components/Medlem3.astro";
 import Afsnit from "../components/Afsnit.astro";
 import Listeview from "../components/Listeview.astro";
 
 import Hero2 from "../components/Hero2.astro";
 
 import Dinby from "../components/Dinby.astro";
+import Medlem2 from "../components/Medlem2.astro";
 
 const curl = "https://weydcspvvunwbeoolpli.supabase.co/rest/v1/AnotherCloset?category=eq.cloths";
 
@@ -34,7 +35,7 @@ console.log(data);
   <section class="card_grid">
     {data.map((product) => <Listeview {product} />)}
   </section>
-  <Medlem />
+  <Medlem3 />
   <Banner />
 </Layout>
 

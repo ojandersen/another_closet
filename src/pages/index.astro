@@ -10,9 +10,11 @@ import Afsnitforside from "../components/Afsnitforside.astro";
 import Afsnitforside2 from "../components/Afsnitforside2.astro";
 import Afsnitforside3 from "../components/Afsnitforside3.astro";
 
-const curl = "https://weydcspvvunwbeoolpli.supabase.co/rest/v1/AnotherCloset?category=eq.cloths";
+const curl =
+  "https://weydcspvvunwbeoolpli.supabase.co/rest/v1/AnotherCloset?category=eq.cloths";
 
-const apikey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndleWRjc3B2dnVud2Jlb29scGxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2NDY5MDMsImV4cCI6MjA2MzIyMjkwM30.n23gpeZ4XikBpL5r_vuSYntCRJLQ7lqiLq92_HovPJo";
+const apikey =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndleWRjc3B2dnVud2Jlb29scGxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2NDY5MDMsImV4cCI6MjA2MzIyMjkwM30.n23gpeZ4XikBpL5r_vuSYntCRJLQ7lqiLq92_HovPJo";
 
 const options = {
   headers: {
@@ -35,6 +37,22 @@ console.log(data);
     {data.map((product) => <Listeview {product} />)}
   </section>
   <Medlem />
+  <h1>MY CLOSET</h1>
+  <p>Giv dit tøj nyt liv hos Another Closet</p>
+  <video
+    class="hero-video"
+    preload="none"
+    autoplay
+    loop
+    controls
+    poster="/poster.webp"
+  >
+    <source
+      src="https://www.dropbox.com/scl/fi/r8ccs7eb9y0l9kz0l2fgt/Skab.mp4?rlkey=dryn0byqh3ozrha894wmu0y2b&st=5mgjv3n7&raw=1"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
   <Banner />
 </Layout>
 
@@ -55,6 +73,12 @@ console.log(data);
     gap: 10px;
     margin: 2%;
   }
+  p {
+    text-align: center;
+    font-family: "Crimson Pro";
+    font-size: clamp(1rem, 2vw, 2rem);
+    color: #393903;
+  }
 
   @media (min-width: 640px) and (max-width: 1024px) {
     .card_grid {
@@ -67,6 +91,21 @@ console.log(data);
     .card_grid {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       margin: 1%;
+    }
+  }
+  video {
+    display: flex;
+    width: 95vw;
+    border-radius: 30px;
+    object-fit: cover;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .hero-video video {
+      border-radius: 20px;
     }
   }
 </style>

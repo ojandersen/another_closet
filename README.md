@@ -1,4 +1,4 @@
-# Teknisk dokumentation for Tema 7 gruppeprojekt – Another Closet
+# Teknisk dokumentation for Tema 10 eksamensprojekt – Another Closet
 
 ## Projektstruktur
 
@@ -15,6 +15,7 @@ Vi har bygget projektet i **Astro** med en klar struktur, der gør det nemt at n
 - Vi bruger **små bogstaver og underscore** til navngivning af filer og mapper (f.eks. `product_list.js`).
 - Tilhørende filer i HTML, CSS og JS har samme navn, fx `product_list.astro`, `product_list.css`, `product_list.js`.
 - Dette gør det hurtigt at finde sammenhørende filer og bevare overblikket.
+- Vi bruger **store bogstaver** til navngivning af komponenter.
 
 ## Git branches
 
@@ -42,10 +43,10 @@ Vi har bygget projektet i **Astro** med en klar struktur, der gør det nemt at n
 
 Vi har arbejdet med følgende kernefunktioner i projektet:
 
-- ✅ Hentning af produkter fra Supabase API (via fetch i JS)
-- ✅ Dynamisk visning af produkter i HTML
-- ✅ Animeret banner
-- ✅ Responsive burgermenu og hero med call-to-action
+- Hentning af produkter fra Supabase API (via fetch i JS)
+- Dynamisk visning af produkter i HTML
+- Animeret banner
+- Responsive burgermenu og hero med call-to-action
 
 ---
 
@@ -75,8 +76,7 @@ En array af objekter med params og props, som Astro bruger til at generere stati
 
 ```javascript
 export async function getStaticPaths() {
-  const curl =
-    "https://weydcspvvunwbeoolpli.supabase.co/rest/v1/AnotherCloset?select=*";
+  const curl = "https://weydcspvvunwbeoolpli.supabase.co/rest/v1/AnotherCloset?select=*";
 
   const apikey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...";
   const options = {

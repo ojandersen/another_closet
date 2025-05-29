@@ -19,9 +19,7 @@ Vi har bygget projektet i **Astro** med en klar struktur, der gør det nemt at n
 
 ## Git branches
 
-- Vi navngiver branches efter følgende konvention: `[navn]_[funktion]`
-  - Eksempel: `Norrebro_afsnit`.
-- Det sikrer, at vi kan se både funktion og ansvarlig person.
+- Vi navngiver branches efter, hvad de relaterer sig til – f.eks. footer, header, hero-section, layout, osv.
 
 ## Arbejdsflow
 
@@ -100,47 +98,30 @@ export async function getStaticPaths() {
 # STRUKTUR
 
 /
-├── public/
+├── public/ # Billeder og SVG’er
 │
-├── src/
-│ ├── assets/
-│ ├── components/
-│ │ ├── Afsnit.astro
-│ │ ├── Afsnitforside.astro
-│ │ ├── Afsnitforside2.astro
-│ │ ├── Afsnitforside3.astro
-│ │ ├── Banner.astro
-│ │ ├── Dinby.astro
-│ │ ├── Footer.astro
-│ │ ├── Fredericia_afsnit.astro
-│ │ ├── Header.astro
-│ │ ├── Hero.astro
-│ │ ├── Hero2.astro
-│ │ ├── Hero3.astro
-│ │ ├── Listeview.astro
-│ │ ├── Medlem.astro
-│ │ ├── Medlem2.astro
-│ │ ├── Medlem3.astro
-│ │ ├── Medlem4.astro
-│ │ ├── Nørrebro_afsnit.astro
-│ │ ├── Ribe_afsnit.astro
-│ │ ├── Roskilde_afsnit.astro
-│ │ ├── Tekststykke_1.astro
-│ │ ├── Tekststykke_2.astro
-│ │ └── Tisvilde.astro
+├── src/ # Alt kildekode ligger her
+│ ├── assets/  
+│ ├── components/ # Genanvendelige Astro-komponenter
+│ │ ├── Afsnit*.astro # Afsnit brugt på forskellige sider
+│ │ ├── Hero*.astro # Hero-sektioner til forskellige sider
+│ │ ├── Medlem\*.astro # Medlemssektioner med variationer
+│ │ ├── Dinby.astro # Komponent til byvalg/visning
+│ │ ├── Listeview.astro # Komponent til visning af produkter i liste
+│ │ └── Header.astro # Fælles header/navigation
 │ ├── css/
-│ │ └── style.css
+│ │ └── style.css # Global CSS-styling
 │ ├── layouts/
-│ │ └── Layout.astro
-│ └── pages/
-│ ├── index.astro
-│ ├── omos.astro
-│ ├── community.astro
-│ ├── fredericia.astro
-│ ├── norrebro.astro
-│ ├── ribe.astro
-│ ├── roskilde.astro
-│ ├── tilleje.astro
+│ │ └── Layout.astro # Layout-komponent som wrapper sider
+│ └── pages/ # Alle rutesider
+│ ├── index.astro # Forside
+│ ├── omos.astro # "Om os"-side
+│ ├── community.astro # Side om tøjfællesskaber
+│ ├── fredericia.astro # By-side for Fredericia
+│ ├── norrebro.astro # By-side for Nørrebro
+│ ├── ribe.astro # By-side for Ribe
+│ ├── roskilde.astro # By-side for Roskilde
+│ ├── tilleje.astro # Info om leje af tøj
 │ └── product/
-│ └── [id].astro
-├── package.json
+│ └── [id].astro # Dynamisk produktside baseret på ID
+├── package.json # Projektmetadata og afhængigheder
